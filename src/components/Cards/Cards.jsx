@@ -44,7 +44,7 @@ function Cards () {
     return (
         <div className="bg-secondary">
             <br />
-            <h1 className="text-center fw-bold fst-italic ">Menú</h1>
+            <h1 className="text-center fw-bold fst-italic">Menú</h1>
             <br />
         <div className="p-2 container d-flex justify-content-center align-items-center h-100">
             <div className="row">

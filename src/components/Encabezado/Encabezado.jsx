@@ -18,9 +18,9 @@ function Encabezado() {
         </Col>
         <Col sm={4}>
             <br />
-            <h1 >Iftar</h1>
+            <h1 className='text-light'>Iftar</h1>
             <br />
-            <h4 style={{flex: 1, justifyContent: 'center', alignItems:"center", lineHeight:"50px"}}>Somos un restorant de comida árabe. Trabajamos para dar a conocer los mejor de las tradiciones culinarias del Medio Oriente, respetando las preparaciones, ingredientes y sabores propios de su cultura.</h4>
+            <h4 className='text-light' style={{flex: 1, justifyContent: 'center', alignItems:"center", lineHeight:"50px"}}>Somos un restorant de comida árabe. Trabajamos para dar a conocer los mejor de las tradiciones culinarias del Medio Oriente, respetando las preparaciones, ingredientes y sabores propios de su cultura.</h4>
         </Col>
       </Row>
       <br />

@@ -3,6 +3,8 @@ import Form from 'react-bootstrap/Form';
 
 function Reserva() {
   return (
+    <div className='p-4 m-4'>
+        <h2 className="text-center fw-bold fst-italic">Reserva tu mesa</h2>
     <Form>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Nombre y Apellido</Form.Label>
@@ -20,6 +22,7 @@ function Reserva() {
         Submit
       </Button>
     </Form>
+    </div>
   );
 }
 
