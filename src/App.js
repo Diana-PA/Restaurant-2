@@ -4,6 +4,7 @@ import Navhome from './components/Navhome/Navhome';
 import Encabezado from './components/Encabezado/Encabezado';
 import Cards from './components/Cards/Cards';
 import Reserva from './components/Reserva/Reserva';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
     <Encabezado />
     <Cards />
     <Reserva />
+    <Footer />
     </>
   );
 }

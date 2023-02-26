@@ -2,6 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from "react-bootstrap/Image";
+import iftar from "/Users/dianaarriagada/Documents/udd_fullstack/restorant4/restorant/src/components/Encabezado/iftar.png"
 
 function Encabezado() {
   return (
@@ -18,9 +19,14 @@ function Encabezado() {
         </Col>
         <Col sm={4}>
             <br />
-            <h1 className='text-light'>Iftar</h1>
+            <Image src={iftar}
+            fluid
+            />
             <br />
-            <h4 className='text-light' style={{flex: 1, justifyContent: 'center', alignItems:"center", lineHeight:"50px"}}>Somos un restorant de comida árabe. Trabajamos para dar a conocer los mejor de las tradiciones culinarias del Medio Oriente, respetando las preparaciones, ingredientes y sabores propios de su cultura.</h4>
+            <br />
+            <p className='m-3 text-light text-center fw-light'>Somos un restorant de comida árabe. Trabajamos para dar a conocer los mejor de las tradiciones culinarias del Medio Oriente, respetando las preparaciones, ingredientes y sabores propios de su cultura.</p>
+            <p className='m-3 text-light text-center fw-light'>Visítanos en nuestros disintos locales a lo largo del país</p>
+            <p className='m-3 text-light text-center fw-light'>نحن في انتظاركم قريبا</p>
         </Col>
       </Row>
       <br />
