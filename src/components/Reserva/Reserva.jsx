@@ -29,7 +29,7 @@ function Reserva({addContact}) {
   };
 
   return (
-    <div className="form-container mb-3 text-center">
+    <div className="form-container mb-3 text-center" id="reserva">
       <form onSubmit={handleSubmit}>
         <div>
           <br />

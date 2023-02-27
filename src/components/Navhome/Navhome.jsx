@@ -6,7 +6,7 @@ const Navhome = () => {
   return (
         <Navbar bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand href="#home">Restorant Iftar</Navbar.Brand>
+          <Navbar.Brand href="#Encabezado">Restorant Iftar</Navbar.Brand>
           <Nav className="justify-content-end">
             <Nav.Link href="#nosotros">Nosotros</Nav.Link>
             <Nav.Link href="#menu">Menú</Nav.Link>

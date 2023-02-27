@@ -42,7 +42,7 @@ const cards = [
 
 function Cards () {
     return (
-        <div className="bg-secondary">
+        <div className="bg-secondary" id="menu">
             <br />
             <h1 className="text-center fw-bold fst-italic">Menú</h1>
             <br />

@@ -6,7 +6,7 @@ import iftar from "/Users/dianaarriagada/Documents/udd_fullstack/restorant4/rest
 
 function Encabezado() {
   return (
-    <div style={{backgroundColor: 'black' }}>
+    <div style={{backgroundColor: 'black' }} id='Encabezado'>
     <Container>
       <br />
       <Row>
