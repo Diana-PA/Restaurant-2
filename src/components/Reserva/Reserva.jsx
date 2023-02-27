@@ -1,6 +1,7 @@
 
 import React, { useState } from "react";
-import { db } from "./firebase"
+import  db  from "./firebase";
+
 
 
 const Reserva = () => {
@@ -14,7 +15,7 @@ const Reserva = () => {
     e.preventDefault();
     setLoader(true);
 
-    db.collection("Mesas")
+    db.collection("Reserva")
       .add({
         name: name,
         email: email,
@@ -23,10 +24,12 @@ const Reserva = () => {
       .then(() => {
         setLoader(false);
         alert("Tu reserva ha sido exitosa");
+        console.log('Entró la informacion')
       })
       .catch((error) => {
         alert(error.message);
         setLoader(false);
+        console.log('Entró al catch')
       });
 
     setName("");
@@ -62,6 +65,7 @@ const Reserva = () => {
       />
 
       <button
+        onClick={handleSubmit}
         type="submit"
         style={{ background: loader ? "#ccc" : " rgb(2, 2, 110)" }}
       >
