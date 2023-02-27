@@ -1,29 +1,74 @@
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
 
-function Reserva() {
+import React, { useState } from "react";
+import { db } from "./firebase"
+
+
+const Reserva = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [personenumber, setPersonenumber] = useState("");
+
+  const [loader, setLoader] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoader(true);
+
+    db.collection("Mesas")
+      .add({
+        name: name,
+        email: email,
+        personenumber: personenumber,
+      })
+      .then(() => {
+        setLoader(false);
+        alert("Tu reserva ha sido exitosa");
+      })
+      .catch((error) => {
+        alert(error.message);
+        setLoader(false);
+      });
+
+    setName("");
+    setEmail("");
+    setPersonenumber("");
+  };
+
   return (
-    <div className='p-4 m-4'>
-        <h2 className="text-center fw-bold fst-italic">Reserva tu mesa</h2>
-    <Form>
-      <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Nombre y Apellido</Form.Label>
-        <Form.Control type="email" placeholder="Ingrese su nombre y apellido" />
-      </Form.Group>
+    <form className="form" onSubmit={handleSubmit}>
+      <h1>Realice su reserva</h1>
 
-      <Form.Group className="mb-3" controlId="formBasicPassword">
-        <Form.Label>Cantidad de personas</Form.Label>
-        <Form.Control type="password" placeholder="Cantidad de personas" />
-      </Form.Group>
-      <Form.Group className="mb-3" controlId="formBasicCheckbox">
-        <Form.Check type="checkbox" label="Check me out" />
-      </Form.Group>
-      <Button variant="primary" type="submit">
-        Submit
-      </Button>
-    </Form>
-    </div>
+      <label>Nombre</label>
+      <input
+        placeholder="Escriba su nombre"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
+
+      <label>Correo</label>
+      <input
+        placeholder="Email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+      />
+
+      <label>Número de personas</label>
+      <input
+        className="form-control"
+        type="number"
+        placeholder="Número de personas"
+        value={personenumber}
+        onChange={(e) => setPersonenumber(e.target.value)}
+      />
+
+      <button
+        type="submit"
+        style={{ background: loader ? "#ccc" : " rgb(2, 2, 110)" }}
+      >
+        Reservar
+      </button>
+    </form>
   );
-}
+};
 
-export default Reserva;
+export default Reserva
