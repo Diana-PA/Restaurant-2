@@ -1,6 +1,6 @@
 
 import React, { useState } from "react";
-import {getFirestore, collection, addDoc , getDocs, doc, deleteDoc, getDoc, setDoc} from "firebase/firestore"
+import { collection, addDoc } from "firebase/firestore"
 import db from "./firebase";
 
 function Reserva({addContact}) {
