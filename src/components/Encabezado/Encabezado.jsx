@@ -2,7 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from "react-bootstrap/Image";
-import iftar from "/Users/dianaarriagada/Documents/udd_fullstack/restorant4/restorant/src/components/Encabezado/iftar.png"
+import iftar from "../../assets/iftar.png";
 
 function Encabezado() {
   return (
